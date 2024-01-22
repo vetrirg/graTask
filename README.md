@@ -79,8 +79,12 @@ The ReactJS web app communicates with the Python server to analyze user-inputted
 ## Usage
 
 - Open the ReactJS web app and input text for analysis or upload a text file.
+- <img width="579" alt="image" src="https://github.com/vetrirg/graTask/assets/143107012/e0224a37-4a8b-4dca-855d-da314fd75237">
+
 - Click the "Analyze Text" button to get statistics for the entered/uploaded text.
 - Optionally, click the "Compare with Earlier Task" button to see a comparison between current and earlier task statistics.
+- <img width="802" alt="image" src="https://github.com/vetrirg/graTask/assets/143107012/022ba47a-b0f0-41c4-99de-04968bd4b010">
+
 
 
 ## Author

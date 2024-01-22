@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# ReactJS Web App and Python Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a simple ReactJS web app and a Python server, demonstrating the integration of frontend and backend components.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+- **/my-app**: Contains the ReactJS web app.
+  - `/src`: Source code for the React app.
+  - `/public`: Public assets and HTML template.
+  - `/node_modules`: Node.js modules and dependencies.
+  - `package.json`: Configuration file for Node.js dependencies.
 
-### `npm start`
+- **/my-app/server**: Houses the Python server.
+  - `server.py`: Python script for the server.
+  - `requirements.txt`: List of Python dependencies.
+  - Any additional files related to the server.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup and Run
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ReactJS Web App
 
-### `npm test`
+1. Navigate to the `/my-app` directory.
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run build`
+3. Start the app:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   The app will be accessible at [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Python Server
 
-### `npm run eject`
+1. Navigate to the `/my-app/server` directory.
+2. Install Python dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Run the server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    python server.py
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   The server will be accessible at [http://localhost:5000](http://localhost:5000).
 
-## Learn More
+## Explanation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The ReactJS web app and Python server work together to perform text analysis using natural language processing (NLP) techniques. Here's a breakdown of the key components and functionalities:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Text Analysis in Python Server
 
-### Code Splitting
+The Python server, implemented in `server.py`, leverages the Natural Language Toolkit (NLTK) library for text analysis. The `analyze_text` function in the server performs the following NLP tasks:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Tokenization:** Splits the text into individual words.
+2. **Basic Statistics:**
+   - Number of words
+   - Number of unique words
+   - Number of stopwords
+   - Number of sentences
+3. **Part-of-Speech Tagging:** Identifies the grammatical parts of words (e.g., nouns).
+   - Number of nouns
+4. **Average Word Length:** Calculates the average length of words.
+5. **Type-Token Ratio (TTR):** Measures vocabulary diversity.
+6. **Sentiment Analysis:** Determines the compound sentiment score using the VADER sentiment analysis tool.
+7. **Named Entity Recognition (NER):** Identifies and counts named entities.
 
-### Analyzing the Bundle Size
+### ReactJS Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The ReactJS web app communicates with the Python server to analyze user-inputted text. Users can input text in a textarea or upload a text file. The app provides a user-friendly interface for analyzing text and comparing statistics with an earlier task.
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Open the ReactJS web app and input text for analysis or upload a text file.
+- Click the "Analyze Text" button to get statistics for the entered/uploaded text.
+- Optionally, click the "Compare with Earlier Task" button to see a comparison between current and earlier task statistics.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Author
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Vetrivel
